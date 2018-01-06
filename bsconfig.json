@@ -1,0 +1,21 @@
+{
+  "name": "vrroom",
+  "reason": {"react-jsx" : 2},
+  "sources": [
+    "src",
+    {
+      "dir": "example",
+      "type": "dev"
+    }
+  ],
+  "package-specs": [{
+    "module": "commonjs",
+    "in-source": true
+  }],
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bs-dependencies": [
+    "reason-react"
+  ],
+  "refmt": 3
+}
