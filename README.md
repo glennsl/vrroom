@@ -11,23 +11,19 @@ Run `npm install --save glennsl/vrroom` and add `vrroom` to `bs-dependencies` in
 #### Control.Map
 ```reason
 /* Without Control.Map */
-<ul>
-  {
-    switch noItems {
-    | [||] => <Item label="." />
-    | items => 
-      items |> Array.map(name => <Item label=name />)
-            |> ReasonReact.arrayToElement
-    }  
-  }
-</ul>
+{
+  switch noItems {
+  | [||] => <Item label="." />
+  | items => 
+    items |> Array.map(name => <Item label=name />)
+          |> ReasonReact.arrayToElement
+  }  
+}
 
 /* With Control.Map */
-<ul>
-  <Map items=noItems empty=<Item label="-"/> >
-    ...(name => <Item label=name />)
-  </Map>
-</ul>
+<Map items=noItems empty=<Item label="-"/> >
+  ...(name => <Item label=name />)
+</Map>
 ```
 
 #### Control.IfSome
