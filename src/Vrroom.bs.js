@@ -14,6 +14,8 @@ function text(prim) {
 
 var $$null = null;
 
+var nbsp = ('\u00a0');
+
 function join(items) {
   return $$String.concat(" ", List.filter((function (param) {
                       return +("" !== param);
@@ -45,6 +47,7 @@ var ClassName = /* module */[
 var Helpers = /* module */[
   /* text */text,
   /* null */$$null,
+  /* nbsp */nbsp,
   /* ClassName */ClassName
 ];
 

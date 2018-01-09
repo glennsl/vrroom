@@ -13,12 +13,12 @@ var instance = ReasonReact.statelessComponent("ClassName example");
 function make() {
   var newrecord = instance.slice();
   newrecord[/* render */9] = (function () {
-      var className = Curry._1(Vrroom$Vrroom.Helpers[/* ClassName */2][/* join */0], /* :: */[
+      var className = Curry._1(Vrroom$Vrroom.Helpers[/* ClassName */3][/* join */0], /* :: */[
             "tooltip",
             /* :: */[
-              Curry._2(Vrroom$Vrroom.Helpers[/* ClassName */2][/* if_ */1], /* true */1, "s-hovered"),
+              Curry._2(Vrroom$Vrroom.Helpers[/* ClassName */3][/* if_ */1], /* true */1, "s-hovered"),
               /* :: */[
-                Curry._1(Vrroom$Vrroom.Helpers[/* ClassName */2][/* fromOption */2], maybeErrorClass),
+                Curry._1(Vrroom$Vrroom.Helpers[/* ClassName */3][/* fromOption */2], maybeErrorClass),
                 /* [] */0
               ]
             ]
@@ -26,10 +26,10 @@ function make() {
       return React.createElement("div", undefined, React.createElement("div", {
                       className: className
                     }, Vrroom$Vrroom.Helpers[/* text */0]("Hello world!")), React.createElement("div", {
-                      className: Curry._1(Vrroom$Vrroom.Helpers[/* ClassName */2][/* join */0], /* :: */[
+                      className: Curry._1(Vrroom$Vrroom.Helpers[/* ClassName */3][/* join */0], /* :: */[
                             "tooltip",
                             /* :: */[
-                              Curry._2(Vrroom$Vrroom.Helpers[/* ClassName */2][/* if_ */1], /* true */1, "s-hovered"),
+                              Curry._2(Vrroom$Vrroom.Helpers[/* ClassName */3][/* if_ */1], /* true */1, "s-hovered"),
                               /* [] */0
                             ]
                           ])
