@@ -1,14 +1,69 @@
 # vRRoom - Turbo-charged ReasonReact!
 
-Run this project:
+A collection of mostly experimental tools and utilities for effective ReasonReact development.
 
+## Installation
+
+Run `npm install --save glennsl/vrroom` and add `vrroom` to `bs-dependencies` in `bsconfig.json`. 
+
+## Examples
+
+#### Control.Map
+```reason
+/* Without Control.Map */
+<ul>
+  {
+    switch noItems {
+    | [||] => <Item label="." />
+    | items => 
+      items |> Array.map(name => <Item label=name />)
+            |> ReasonReact.arrayToElement
+    }  
+  }
+</ul>
+
+/* With Control.Map */
+<ul>
+  <Map items=noItems empty=<Item label="-"/> >
+    ...(name => <Item label=name />)
+  </Map>
+</ul>
 ```
-npm install
-npm start
-# in another tab
-npm run webpack
+
+#### Control.IfSome
+```reason
+/* Without Control.IfSome */
+{
+  switch maybeError {
+  | Some(error) => {error |> text}
+  | None => ReasonReact.nullElement
+  }
+}
+
+/* With Control.IfSome */
+<IfSome option=maybeError>
+  ...(error => error |> text)
+</IfSome>
 ```
 
-After you see the webpack compilation succeed (the `npm run webpack` step), open up the nested html files in `src/*` (**no server needed!**). Then modify whichever file in `src` and refresh the page to see the changes.
+#### pure
+```reason
+/* Without pure */
+module ItemBefore = {
+  let instance = ReasonReact.statelessComponent("Item");
+  let make = (~label, _children) => {
+    ...instance,
+    render: _self =>
+      <li> (label |> text) </li>
+  }
+};
 
-**For more elaborate ReasonReact examples**, please see https://github.com/reasonml-community/reason-react-example
+/* With pure */
+module Item = {
+  let make = Vrroom.pure((render, ~label) => render(
+    <li> (label |> text) </li>
+  ));
+};
+```
+
+See more examples in [the examples folder](https://github.com/glennsl/vrroom/tree/master/examples)
