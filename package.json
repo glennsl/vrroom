@@ -10,7 +10,7 @@
     "webpack": "webpack -w"
   },
   "keywords": [
-    "reason*,
+    "reason",
     "bucklescript",
     "react",
     "reason-react",
