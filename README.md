@@ -122,7 +122,7 @@ modul Item = {
 
 ### module Text
 
-#### let string : string => ReasonReact.reactElement
+#### let Text.string : string => ReasonReact.reactElement
 
 Alias for `ReasonReact.stringToElement`.
 
@@ -131,7 +131,7 @@ Example:
 <div> {"Hello!" |> Text.string} </div>
 ```
 
-#### let int : int => ReasonReact.reactElement
+#### let Text.int : int => ReasonReact.reactElement
 
 Would be an alias for `ReasonReact.intToElement` if it had existed.
 
@@ -140,7 +140,7 @@ Example:
 <div> {42 |> Text.int} </div>
 ```
 
-#### let float : float => ReasonReact.reactElement
+#### let Text.float : float => ReasonReact.reactElement
 
 Would be an alias for `ReasonReact.floatToElement` if it had existed.
 
@@ -149,7 +149,7 @@ Example:
 <div> {4.2 |> Text.float} </div>
 ```
 
-#### let any : _ => ReasonReact.reactElement
+#### let Text.any : _ => ReasonReact.reactElement
 
 Converts anything to a string, then casts it as an element.
 
@@ -160,7 +160,7 @@ Example:
 
 ### module ClassName
 
-#### let join : list(string) => string
+#### let ClassName.join : list(string) => string
 
 Joins a list of strings into a single space-separated string, ignoring empty string.
 
@@ -169,7 +169,7 @@ Example:
 <div className=ClassName.join(["button", "primary"])> ... </div>
 ```
 
-#### let if_ : (bool, string) => string
+#### let ClassName.if_ : (bool, string) => string
 
 Returns the given string if condition is true, otherwise an empty string. Most useful in conjunction with thje `join` function.
 
@@ -178,7 +178,7 @@ Example:
 <div className=ClassName.(join(["button", "s-hover" |> if_(isHovered))])> ... </div>
 ```
 
-#### let fromOption : option(string) => string
+#### let ClassName.fromOption : option(string) => string
 
 Returns the contained string if any, otherwise an empty string. Most useful in conjunction with thje `join` function.
 
