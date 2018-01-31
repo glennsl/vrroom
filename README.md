@@ -187,7 +187,7 @@ Example:
 <div className=ClassName.(join(["button", maybeError |> fromOption]))> ... </div>
 ```
 
-#### <Fragment> array(ReasonReact.reactElement) </Fragment>
+#### &lt;Fragment&gt; array(ReasonReact.reactElement) &lt;/Fragment&gt;
 
 Binding to the standard [React Fragment](https://reactjs.org/docs/fragments.html) component. Renders its children without a surrounding DOM element.
 
