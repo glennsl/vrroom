@@ -71,6 +71,17 @@ var Helpers = /* module */[
   /* ClassName */ClassName
 ];
 
+function pure(make) {
+  var instance = ReasonReact.statelessComponent("Pure");
+  return Curry._1(make, (function (element, _) {
+                var newrecord = instance.slice();
+                newrecord[/* render */9] = (function () {
+                    return element;
+                  });
+                return newrecord;
+              }));
+}
+
 function make(children) {
   return ReasonReact.wrapJsForReason(React.Fragment, { }, children);
 }
@@ -154,19 +165,16 @@ var Control = /* module */[
   /* IfSome */IfSome
 ];
 
-function pure(make) {
-  var instance = ReasonReact.statelessComponent("Pure");
-  return Curry._1(make, (function (element, _) {
-                var newrecord = instance.slice();
-                newrecord[/* render */9] = (function () {
-                    return element;
-                  });
-                return newrecord;
-              }));
-}
+var text = string;
 
-exports.Helpers  = Helpers;
-exports.Fragment = Fragment;
-exports.Control  = Control;
-exports.pure     = pure;
+exports.Helpers   = Helpers;
+exports.Text      = Text;
+exports.text      = text;
+exports.nothing   = nothing;
+exports.nbsp      = nbsp;
+exports.$$null    = $$null;
+exports.ClassName = ClassName;
+exports.pure      = pure;
+exports.Fragment  = Fragment;
+exports.Control   = Control;
 /* nothing Not a pure module */

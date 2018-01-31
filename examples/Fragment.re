@@ -2,7 +2,7 @@ open Vrroom.Helpers;
 
 module ThreeItems = {
   let instance = ReasonReact.statelessComponent("ThreeItems");
-  let make = _children => {
+  let make = (_:childless) => {
     ...instance,
     render: _self =>
       <Vrroom.Fragment>
@@ -14,7 +14,7 @@ module ThreeItems = {
 };
 
 let instance = ReasonReact.statelessComponent("Fragment example");
-let make = _children => {
+let make = (_:childless) => {
   ...instance,
   render: _self =>
     <ol>

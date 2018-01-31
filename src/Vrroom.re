@@ -31,6 +31,16 @@ module Helpers = {
   };
 };
 
+include Helpers;
+
+let pure = make => {
+  let instance = ReasonReact.statelessComponent("Pure");
+  make((element, _:childless) => {
+    ...instance,
+    render: _self => element
+  });
+};
+
 module Fragment = {
   [@bs.module "react"] external reactClass : ReasonReact.reactClass = "Fragment";
   let make = children =>
@@ -96,12 +106,4 @@ module Control = {
         }
     };
   };
-};
-
-let pure = make => {
-  let instance = ReasonReact.statelessComponent("Pure");
-  make((element, _children:array(unit)) => {
-    ...instance,
-    render: _self => element
-  });
 };

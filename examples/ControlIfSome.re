@@ -1,10 +1,9 @@
-open Vrroom.Helpers;
-open Vrroom.Control;
+open Vrroom;
 
 let maybeError = Some("oops!");
 
 let instance = ReasonReact.statelessComponent("Control.IfSome example");
-let make = _children => {
+let make = (_:childless) => {
   ...instance,
   render: _self =>
     <div>
@@ -18,9 +17,9 @@ let make = _children => {
       }
 
       /* After */
-      <IfSome option=maybeError>
+      <Control.IfSome option=maybeError>
         ...(error => error |> text)
-      </IfSome>
+      </Control.IfSome>
 
     </div>
 };

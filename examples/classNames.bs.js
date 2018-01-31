@@ -25,7 +25,7 @@ function make() {
           ]);
       return React.createElement("div", undefined, React.createElement("div", {
                       className: className
-                    }, Vrroom.Helpers[/* text */1]("Hello world!")), React.createElement("div", {
+                    }, Vrroom.text("Hello world!")), React.createElement("div", {
                       className: Curry._1(Vrroom.Helpers[/* ClassName */5][/* join */0], /* :: */[
                             "tooltip",
                             /* :: */[
@@ -33,7 +33,7 @@ function make() {
                               /* [] */0
                             ]
                           ])
-                    }, Vrroom.Helpers[/* text */1]("Hello world!")));
+                    }, Vrroom.text("Hello world!")));
     });
   return newrecord;
 }

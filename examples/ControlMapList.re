@@ -1,5 +1,4 @@
-open Vrroom.Helpers;
-open Vrroom.Control;
+open Vrroom;
 
 module Item = {
   let instance = ReasonReact.statelessComponent("Item");
@@ -18,7 +17,7 @@ let items = [
 let noItems = [];
 
 let instance = ReasonReact.statelessComponent("Control.MapList example");
-let make = _children => {
+let make = (_:childless) => {
   ...instance,
   render: _self =>
     <div>
@@ -34,9 +33,9 @@ let make = _children => {
 
       /* After */
       <ul>
-        <MapList items>
+        <Control.MapList items>
           ...(name => <Item label=name />)
-        </MapList>
+        </Control.MapList>
       </ul>
 
 
@@ -55,9 +54,9 @@ let make = _children => {
 
       /* After - Special case empty*/
       <ul>
-        <MapList items=noItems empty=<Item label="-"/> >
+        <Control.MapList items=noItems empty=<Item label="-"/> >
           ...(name => <Item label=name />)
-        </MapList>
+        </Control.MapList>
       </ul>
 
     </div>

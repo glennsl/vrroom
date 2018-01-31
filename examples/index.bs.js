@@ -3,7 +3,7 @@
 
 var Pure           = require("./pure.bs.js");
 var React          = require("react");
-var Fragment       = require("./Fragment.bs.js");
+var Vrroom         = require("../src/Vrroom.bs.js");
 var ControlIf      = require("./ControlIf.bs.js");
 var ControlMap     = require("./ControlMap.bs.js");
 var ReactDOMRe     = require("reason-react/src/ReactDOMRe.js");
@@ -16,7 +16,7 @@ var instance = ReasonReact.statelessComponent("Page");
 function make() {
   var newrecord = instance.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Pure.make(/* array */[])), ReasonReact.element(/* None */0, /* None */0, Fragment.make(/* array */[])), ReasonReact.element(/* None */0, /* None */0, ControlMap.make(/* array */[])), ReasonReact.element(/* None */0, /* None */0, ControlMapList.make(/* array */[])), ReasonReact.element(/* None */0, /* None */0, ControlIf.make(/* array */[])), ReasonReact.element(/* None */0, /* None */0, ControlIfSome.make(/* array */[])));
+      return React.createElement("div", undefined, ReasonReact.element(/* None */0, /* None */0, Pure.make(/* array */[])), ReasonReact.element(/* None */0, /* None */0, Vrroom.Fragment[/* make */0](/* array */[])), ReasonReact.element(/* None */0, /* None */0, ControlMap.make(/* array */[])), ReasonReact.element(/* None */0, /* None */0, ControlMapList.make(/* array */[])), ReasonReact.element(/* None */0, /* None */0, ControlIf.make(/* array */[])), ReasonReact.element(/* None */0, /* None */0, ControlIfSome.make(/* array */[])));
     });
   return newrecord;
 }

@@ -1,9 +1,9 @@
-open Vrroom.Helpers;
+open Vrroom;
 
 /* Before */
 module ItemBefore = {
   let instance = ReasonReact.statelessComponent("Item");
-  let make = (~label, _children) => {
+  let make = (~label, _:childless) => {
     ...instance,
     render: _self =>
       <li> (label |> text) </li>
@@ -12,13 +12,13 @@ module ItemBefore = {
 
 /* After */
 module Item = {
-  let make = Vrroom.pure((render, ~label) => render(
+  let make = pure((render, ~label) => render(
     <li> (label |> text) </li>
   ));
 };
 
 let instance = ReasonReact.statelessComponent("Pure example");
-let make = _children => {
+let make = (_:childless) => {
   ...instance,
 
   render: _self =>

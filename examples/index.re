@@ -1,6 +1,8 @@
+open Vrroom;
+
 module Page = {
   let instance = ReasonReact.statelessComponent("Page");
-  let make = _children => {
+  let make = (_:childless) => {
     ...instance,
 
     render: _self =>

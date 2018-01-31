@@ -1,10 +1,9 @@
-open Vrroom.Helpers;
-open Vrroom.Control;
+open Vrroom;
 
 let showHello = true;
 
 let instance = ReasonReact.statelessComponent("Control.If example");
-let make = _children => {
+let make = (_:childless) => {
   ...instance,
   render: _self =>
     <div>
@@ -19,9 +18,9 @@ let make = _children => {
       }
 
       /* After */
-      <If cond=showHello>
+      <Control.If cond=showHello>
           ...(() => "Hello" |> text)
-      </If>
+      </Control.If>
 
     </div>
 };
