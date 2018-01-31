@@ -1,4 +1,8 @@
+type nothing;
+
 module Helpers = {
+  type childless = array(nothing);
+
   let text = ReasonReact.stringToElement;
   let null = ReasonReact.nullElement;
   let nbsp = [%raw "'\u00a0'"];
