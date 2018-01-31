@@ -51,7 +51,7 @@ module Control = {
   module Map = {
     let component = ReasonReact.statelessComponent("Control.Map");
     let make = (~items: array('a),
-                ~empty: ReasonReact.reactElement=ReasonReact.nullElement,
+                ~empty: ReasonReact.reactElement=nothing,
                 render: 'a => ReasonReact.reactElement) => {
       ...component,
 
@@ -71,7 +71,7 @@ module Control = {
   module MapList = {
     let component = ReasonReact.statelessComponent("Control.MapList");
     let make = (~items: list('a),
-                ~empty: ReasonReact.reactElement=ReasonReact.nullElement,
+                ~empty: ReasonReact.reactElement=nothing,
                 render: 'a => ReasonReact.reactElement) => {
       ...component,
 
@@ -89,7 +89,7 @@ module Control = {
       ...component,
 
       render: _self =>
-        cond ? render() : ReasonReact.nullElement
+        cond ? render() : nothing
     };
   };
 
@@ -102,7 +102,7 @@ module Control = {
       render: _self =>
         switch option {
         | Some(value) => render(value)
-        | None        => ReasonReact.nullElement
+        | None        => nothing
         }
     };
   };

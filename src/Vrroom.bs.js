@@ -91,7 +91,7 @@ var Fragment = /* module */[/* make */make];
 var component = ReasonReact.statelessComponent("Control.Map");
 
 function make$1(items, $staropt$star, render) {
-  var empty = $staropt$star ? $staropt$star[0] : null;
+  var empty = $staropt$star ? $staropt$star[0] : nothing;
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
       return ReasonReact.element(/* None */0, /* None */0, make(/* array */[items.length !== 0 ? $$Array.map(render, items) : empty]));
@@ -107,7 +107,7 @@ var $$Map = /* module */[
 var component$1 = ReasonReact.statelessComponent("Control.MapList");
 
 function make$2(items, $staropt$star, render) {
-  var empty = $staropt$star ? $staropt$star[0] : null;
+  var empty = $staropt$star ? $staropt$star[0] : nothing;
   var newrecord = component$1.slice();
   newrecord[/* render */9] = (function () {
       return ReasonReact.element(/* None */0, /* None */0, make$1($$Array.of_list(items), /* Some */[empty], render));
@@ -128,7 +128,7 @@ function make$3(cond, render) {
       if (cond !== 0) {
         return Curry._1(render, /* () */0);
       } else {
-        return null;
+        return nothing;
       }
     });
   return newrecord;
@@ -147,7 +147,7 @@ function make$4(option, render) {
       if (option) {
         return Curry._1(render, option[0]);
       } else {
-        return null;
+        return nothing;
       }
     });
   return newrecord;
