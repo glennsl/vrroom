@@ -5,7 +5,7 @@ module Helpers = {
 
   let text = ReasonReact.stringToElement;
   let null = ReasonReact.nullElement;
-  let nbsp = [%raw "'\u00a0'"];
+  let nbsp = [%raw {|'\u00a0'|}];
 
   module ClassName = {
     let join = items =>
