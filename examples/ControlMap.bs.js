@@ -12,7 +12,7 @@ var instance = ReasonReact.statelessComponent("Item");
 function make(label, _) {
   var newrecord = instance.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("li", undefined, Vrroom.Helpers[/* text */0](label));
+      return React.createElement("li", undefined, Vrroom.Helpers[/* text */1](label));
     });
   return newrecord;
 }

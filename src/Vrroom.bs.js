@@ -6,11 +6,27 @@ var $$Array     = require("bs-platform/lib/js/array.js");
 var Curry       = require("bs-platform/lib/js/curry.js");
 var React       = require("react");
 var $$String    = require("bs-platform/lib/js/string.js");
+var Pervasives  = require("bs-platform/lib/js/pervasives.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 
-function text(prim) {
+function string(prim) {
   return prim;
 }
+
+var $$int = Pervasives.string_of_int;
+
+var $$float = Pervasives.string_of_float;
+
+function any(v) {
+  return String(v);
+}
+
+var Text = /* module */[
+  /* string */string,
+  /* int */$$int,
+  /* float */$$float,
+  /* any */any
+];
 
 var nothing = null;
 
@@ -47,7 +63,8 @@ var ClassName = /* module */[
 ];
 
 var Helpers = /* module */[
-  /* text */text,
+  /* Text */Text,
+  /* text */string,
   /* nothing */nothing,
   /* nbsp */nbsp,
   /* null */$$null,

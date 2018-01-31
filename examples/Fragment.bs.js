@@ -11,9 +11,9 @@ function make() {
   var newrecord = instance.slice();
   newrecord[/* render */9] = (function () {
       return ReasonReact.element(/* None */0, /* None */0, Vrroom.Fragment[/* make */0](/* array */[
-                      React.createElement("li", undefined, Vrroom.Helpers[/* text */0]("Item 1")),
-                      React.createElement("li", undefined, Vrroom.Helpers[/* text */0]("Item 2")),
-                      React.createElement("li", undefined, Vrroom.Helpers[/* text */0]("Item 3"))
+                      React.createElement("li", undefined, Vrroom.Helpers[/* text */1]("Item 1")),
+                      React.createElement("li", undefined, Vrroom.Helpers[/* text */1]("Item 2")),
+                      React.createElement("li", undefined, Vrroom.Helpers[/* text */1]("Item 3"))
                     ]));
     });
   return newrecord;
@@ -29,7 +29,7 @@ var instance$1 = ReasonReact.statelessComponent("Fragment example");
 function make$1() {
   var newrecord = instance$1.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("ol", undefined, React.createElement("li", undefined, Vrroom.Helpers[/* text */0]("Item 0")), ReasonReact.element(/* None */0, /* None */0, make(/* array */[])), React.createElement("li", undefined, Vrroom.Helpers[/* text */0]("Item 4")));
+      return React.createElement("ol", undefined, React.createElement("li", undefined, Vrroom.Helpers[/* text */1]("Item 0")), ReasonReact.element(/* None */0, /* None */0, make(/* array */[])), React.createElement("li", undefined, Vrroom.Helpers[/* text */1]("Item 4")));
     });
   return newrecord;
 }

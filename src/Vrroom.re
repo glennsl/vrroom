@@ -3,13 +3,19 @@ type nothing;
 module Helpers = {
   type childless = array(nothing);
 
-  let text = ReasonReact.stringToElement;
+  module Text = {
+    let string  = ReasonReact.stringToElement;
+    let int     = n => n |> string_of_int   |> string;
+    let float   = f => f |> string_of_float |> string;
+    let any     = v => v |> Js.String.make  |> string;
+  };
+
+  let text = Text.string;
   let nothing = ReasonReact.nullElement;
   let nbsp = [%raw {|'\u00a0'|}];
 
   [@deprecated "deprecated in favor of [nothing]"]
   let null = ReasonReact.nullElement;
-
 
   module ClassName = {
     let join = items =>

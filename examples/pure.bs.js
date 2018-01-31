@@ -11,7 +11,7 @@ var instance = ReasonReact.statelessComponent("Item");
 function make(label, _) {
   var newrecord = instance.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("li", undefined, Vrroom.Helpers[/* text */0](label));
+      return React.createElement("li", undefined, Vrroom.Helpers[/* text */1](label));
     });
   return newrecord;
 }
@@ -22,7 +22,7 @@ var ItemBefore = /* module */[
 ];
 
 var make$1 = Vrroom.pure((function (render, label) {
-        return Curry._1(render, React.createElement("li", undefined, Vrroom.Helpers[/* text */0](label)));
+        return Curry._1(render, React.createElement("li", undefined, Vrroom.Helpers[/* text */1](label)));
       }));
 
 var Item = /* module */[/* make */make$1];

@@ -11,8 +11,8 @@ var instance = ReasonReact.statelessComponent("Control.If example");
 function make() {
   var newrecord = instance.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("div", undefined, Vrroom.Helpers[/* text */0]("Hello"), ReasonReact.element(/* None */0, /* None */0, Curry._2(Vrroom.Control[/* If */2][/* make */1], /* true */1, (function () {
-                            return Vrroom.Helpers[/* text */0]("Hello");
+      return React.createElement("div", undefined, Vrroom.Helpers[/* text */1]("Hello"), ReasonReact.element(/* None */0, /* None */0, Curry._2(Vrroom.Control[/* If */2][/* make */1], /* true */1, (function () {
+                            return Vrroom.Helpers[/* text */1]("Hello");
                           }))));
     });
   return newrecord;
