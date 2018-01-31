@@ -21,9 +21,9 @@ Run `npm install --save glennsl/vrroom` and add `vrroom` to `bs-dependencies` in
 }
 
 /* With Control.Map */
-<Map items=noItems empty=<Item label="-"/> >
+<Control.Map items=noItems empty=<Item label="-"/> >
   ...(name => <Item label=name />)
-</Map>
+</Control.Map>
 ```
 
 #### Control.IfSome
@@ -31,15 +31,15 @@ Run `npm install --save glennsl/vrroom` and add `vrroom` to `bs-dependencies` in
 /* Without Control.IfSome */
 {
   switch maybeError {
-  | Some(error) => {error |> text}
-  | None => ReasonReact.nullElement
+  | Some(error) => error |> text
+  | None        => nothing
   }
 }
 
 /* With Control.IfSome */
-<IfSome option=maybeError>
+<Control.IfSome option=maybeError>
   ...(error => error |> text)
-</IfSome>
+</Control.IfSome>
 ```
 
 #### pure
@@ -56,7 +56,7 @@ module ItemBefore = {
 
 /* With pure */
 module Item = {
-  let make = Vrroom.pure((render, ~label) => render(
+  let make = pure((render, ~label) => render(
     <li> (label |> text) </li>
   ));
 };

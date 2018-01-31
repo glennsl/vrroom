@@ -11,7 +11,7 @@ var instance = ReasonReact.statelessComponent("Item");
 function make(label, _) {
   var newrecord = instance.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("li", undefined, Vrroom.Helpers[/* text */1](label));
+      return React.createElement("li", undefined, label);
     });
   return newrecord;
 }
@@ -22,7 +22,7 @@ var ItemBefore = /* module */[
 ];
 
 var make$1 = Vrroom.pure((function (render, label) {
-        return Curry._1(render, React.createElement("li", undefined, Vrroom.Helpers[/* text */1](label)));
+        return Curry._1(render, React.createElement("li", undefined, Vrroom.text(label)));
       }));
 
 var Item = /* module */[/* make */make$1];
@@ -32,7 +32,7 @@ var instance$1 = ReasonReact.statelessComponent("Pure example");
 function make$2() {
   var newrecord = instance$1.slice();
   newrecord[/* render */9] = (function () {
-      return React.createElement("ul", undefined, ReasonReact.element(/* None */0, /* None */0, Curry._2(make$1, "apples", /* int array */[])), ReasonReact.element(/* None */0, /* None */0, Curry._2(make$1, "bananas", /* int array */[])), ReasonReact.element(/* None */0, /* None */0, Curry._2(make$1, "coconuts", /* int array */[])));
+      return React.createElement("ul", undefined, ReasonReact.element(/* None */0, /* None */0, Curry._2(make$1, "apples", /* array */[])), ReasonReact.element(/* None */0, /* None */0, Curry._2(make$1, "bananas", /* array */[])), ReasonReact.element(/* None */0, /* None */0, Curry._2(make$1, "coconuts", /* array */[])));
     });
   return newrecord;
 }

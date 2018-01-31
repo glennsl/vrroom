@@ -11,8 +11,8 @@ let make = (_:childless) => {
       /* Before */
       {
         switch maybeError {
-        | Some(error) => {error |> text}
-        | None => ReasonReact.nullElement
+        | Some(error) => ReasonReact.stringToElement(error)
+        | None        => ReasonReact.nullElement
         }
       }
 

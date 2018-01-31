@@ -6,7 +6,7 @@ module ItemBefore = {
   let make = (~label, _:childless) => {
     ...instance,
     render: _self =>
-      <li> (label |> text) </li>
+      <li> (label |> ReasonReact.stringToElement) </li>
   }
 };
 
