@@ -4,8 +4,12 @@ module Helpers = {
   type childless = array(nothing);
 
   let text = ReasonReact.stringToElement;
-  let null = ReasonReact.nullElement;
+  let nothing = ReasonReact.nullElement;
   let nbsp = [%raw {|'\u00a0'|}];
+
+  [@deprecated "deprecated in favor of [nothing]"]
+  let null = ReasonReact.nullElement;
+
 
   module ClassName = {
     let join = items =>

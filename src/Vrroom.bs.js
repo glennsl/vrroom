@@ -12,9 +12,11 @@ function text(prim) {
   return prim;
 }
 
-var $$null = null;
+var nothing = null;
 
 var nbsp = ('\u00a0');
+
+var $$null = null;
 
 function join(items) {
   return $$String.concat(" ", List.filter((function (param) {
@@ -46,8 +48,9 @@ var ClassName = /* module */[
 
 var Helpers = /* module */[
   /* text */text,
-  /* null */$$null,
+  /* nothing */nothing,
   /* nbsp */nbsp,
+  /* null */$$null,
   /* ClassName */ClassName
 ];
 
@@ -149,4 +152,4 @@ exports.Helpers  = Helpers;
 exports.Fragment = Fragment;
 exports.Control  = Control;
 exports.pure     = pure;
-/* null Not a pure module */
+/* nothing Not a pure module */
