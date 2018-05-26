@@ -175,7 +175,7 @@ Returns the given string if condition is true, otherwise an empty string. Most u
 
 Example:
 ```reason
-<div className=ClassName.(join(["button", "s-hover" |> if_(isHovered))])> ... </div>
+<div className=ClassName.(join(["button", "s-hover" |> if_(isHovered)]))> ... </div>
 ```
 
 #### let ClassName.fromOption : option(string) => string
