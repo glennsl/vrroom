@@ -27,7 +27,7 @@ let make = (_:childless) => {
         {
           items |> List.map(name => <Item label=name />)
                 |> Array.of_list
-                |> ReasonReact.arrayToElement
+                |> ReasonReact.array
         }
       </ul>
 
@@ -47,7 +47,7 @@ let make = (_:childless) => {
           | items => 
             items |> List.map(name => <Item label=name />)
                   |> Array.of_list
-                  |> ReasonReact.arrayToElement
+                  |> ReasonReact.array
           }  
         }
       </ul>

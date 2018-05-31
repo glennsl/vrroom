@@ -11,9 +11,9 @@ let make = (_:childless) => {
       /* Before */
       {
         if (showHello) {
-          ReasonReact.stringToElement("Hello")
+          ReasonReact.string("Hello")
         } else {
-          ReasonReact.nullElement
+          ReasonReact.null
         }
       }
 

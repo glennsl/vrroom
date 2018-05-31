@@ -21,7 +21,7 @@ top of the module. Otherwise, to avoid polluting the namespace, using `module V 
   | [||] => <Item label="." />
   | items => 
     items |> Array.map(name => <Item label=name />)
-          |> ReasonReact.arrayToElement
+          |> ReasonReact.array
   }  
 }
 
@@ -82,7 +82,7 @@ let make = (_:childless) => ...
 
 #### let text : string => ReasonReact.reactElement
 
-Alias for `Text.string` and therefore `ReasonReact.stringToElement`.
+Alias for `Text.string` and therefore `ReasonReact.string`.
 
 Example:
 ```reason
@@ -91,7 +91,7 @@ Example:
 
 #### let nothing : ReasonReact.reactElement
 
-Alias for `ReasonReact.nullElement`.
+Alias for `ReasonReact.null`.
 
 Example:
 ```reason
@@ -124,7 +124,7 @@ modul Item = {
 
 #### let Text.string : string => ReasonReact.reactElement
 
-Alias for `ReasonReact.stringToElement`.
+Alias for `ReasonReact.string`.
 
 Example:
 ```reason

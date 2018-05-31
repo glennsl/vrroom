@@ -4,18 +4,18 @@ module Helpers = {
   type childless = array(nothing);
 
   module Text = {
-    let string  = ReasonReact.stringToElement;
+    let string  = ReasonReact.string;
     let int     = n => n |> string_of_int   |> string;
     let float   = f => f |> string_of_float |> string;
     let any     = v => v |> Js.String.make  |> string;
   };
 
   let text = Text.string;
-  let nothing = ReasonReact.nullElement;
+  let nothing = ReasonReact.null;
   let nbsp = [%raw {|'\u00a0'|}];
 
   [@deprecated "deprecated in favor of [nothing]"]
-  let null = ReasonReact.nullElement;
+  let null = ReasonReact.null;
 
   module ClassName = {
     let join = items =>
@@ -61,7 +61,7 @@ module Control = {
             switch items {
             | [||] => empty
             | _    => items |> Array.map(render)
-                            |> ReasonReact.arrayToElement
+                            |> ReasonReact.array
             }
           }
         </Fragment>

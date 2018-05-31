@@ -26,7 +26,7 @@ let make = (_:childless) => {
       <ul>
         {
           items |> Array.map(name => <Item label=name />)
-                |> ReasonReact.arrayToElement
+                |> ReasonReact.array
         }
       </ul>
 
@@ -45,7 +45,7 @@ let make = (_:childless) => {
           | [||] => <Item label="." />
           | items => 
             items |> Array.map(name => <Item label=name />)
-                  |> ReasonReact.arrayToElement
+                  |> ReasonReact.array
           }  
         }
       </ul>
