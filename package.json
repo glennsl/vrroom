@@ -1,6 +1,6 @@
 {
   "name": "vrroom",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A collection of mostly experimental tools and utilities for effective ReasonReact development",
   "scripts": {
     "build": "bsb -make-world",
